@@ -1,31 +1,28 @@
-
+import './Nav.css';
 import logo from './img/logo.png';
 
 const nav = () =>{
     return (
-        <div>
-            <div>
-                <img src={logo}/>
-            </div>
-            <div>
-                <ul>
-                    <li>
-                        <a href="./">Home</a>
+        <div className='NavBar'>
+            <nav className='Navbuttoms'>
+                <ul className='navList'>
+                    <li class="nav-item">
+                        <a className='links' href="./">Home</a>
                     </li>
-                    <li>
-                        <a href="./">About</a>
+                    <li class="nav-item">
+                        <a className='links' href="./">About</a>
                     </li>
-                    <li>
-                        <a href="./">Menu</a>
+                    <li class="nav-item">
+                        <a className='links' href="./">Menu</a>
                     </li>
-                    <li>
-                        <a href="./">Reservation</a>
+                    <li class="nav-item">
+                        <a className='links' href="./">Reservation</a>
                     </li>
-                    <li>
-                        <a href="./">Contact Us</a>
+                    <li class="nav-item">
+                        <a className='links' href="./">Contact Us</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
     );
 };

@@ -1,0 +1,31 @@
+
+.Nav-container {
+    display: flex;
+    align-items: center; /* Optional: Keep nav items aligned vertically */
+  }
+  .logo {
+    width: 50%;
+  }
+  
+  .NavBar {
+    padding: 10px;
+    display: flex; /* Enable flexbox for alignment */
+    width: 100%; /* Ensure it spans across */
+  
+  }
+  .navList {
+    display: flex;
+    padding: 10px;
+    gap: 50px;
+    list-style: none;
+  
+  }
+  .Navbuttoms {
+    padding: 10px;
+    margin-left: auto;
+  }
+  .links {
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius:8px;
+  }

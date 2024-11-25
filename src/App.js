@@ -6,20 +6,23 @@ import './App.css';
 
 function App() {
   return (
-    <>
+    <div className='app-container'>
     <Header>
 
     </Header>
-    <Nav>
+    <div className='Nav-container'>
+      <Nav>
 
-    </Nav>
+      </Nav>
+
+    </div>
     <Main>
 
     </Main>
     <Footer>
 
     </Footer>
-    </>
+    </div>
   );
 }
 
