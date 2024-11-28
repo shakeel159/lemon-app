@@ -1,8 +1,17 @@
 
 
+/* General Body and Container Setup */
+html, body {
+  height: 100%;  /* Ensure the body takes up the full viewport height */
+  margin: 0;     /* Remove default margin */
+}
+
 .app-container {
-  background-color:darkolivegreen;
-  display: flex;
-  justify-content: space-between; /* Distribute space between children */
-  align-items: center; /* Align items vertically */
+  display: flex;               /* Enable flexbox */
+  flex-direction: column;      /* Stack items vertically */
+  min-height: 100vh;           /* Ensure the container takes up at least the full viewport height */
+}
+.main-container{
+  border: solid 2px;
+  flex-grow: 1; 
 }
