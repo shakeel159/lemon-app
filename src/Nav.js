@@ -1,30 +1,15 @@
 import './Nav.css';
 import logo from './img/logo.png';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const nav = () =>{
+const Nav = () =>{
     return (
-        <div className='NavBar'>
-            <nav className='Navbuttoms'>
-                <ul className='navList'>
-                    <li class="nav-item">
-                        <a className='links' href="./">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a className='links' href="./">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a className='links' href="./">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a className='links' href="./">Reservation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a className='links' href="./">Contact Us</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+        </nav>
     );
 };
 
-export default nav;
+export default Nav;
