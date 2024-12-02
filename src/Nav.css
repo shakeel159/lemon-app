@@ -1,7 +1,6 @@
 
 
 .NavBar {
-    background-color:darkolivegreen;
     display: flex;          
     align-items: center;    
     justify-content: space-between; 
@@ -14,7 +13,7 @@
     align-items: center;        
 }
 .logo {
-    width: 150px;   
+    width: 100px;   
     height: auto;  
 }
 

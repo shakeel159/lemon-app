@@ -1,0 +1,38 @@
+
+
+.CallToAction-Container {
+    display:  flex;
+    flex-wrap: wrap;
+
+
+    background-color:darkolivegreen
+}
+
+.CallToAction-title {
+    width: 100%;
+    margin: auto;
+}
+#Name {
+    color:gold;
+    font-size: 300%;
+}
+#Location {
+    color: aliceblue;
+}
+.CallToAction-Body-container {
+    display:  flex;
+    flex-wrap: wrap;
+    margin: 35px;
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.CallToAction-text {
+    width: 100%;
+    margin: auto;
+}
+.CallToAction-Img-Container {
+    display: flex;
+    transform: scale(70%);
+}
+

@@ -12,6 +12,5 @@ html, body {
   min-height: 100vh;           /* Ensure the container takes up at least the full viewport height */
 }
 .main-container{
-  border: solid 2px;
   flex-grow: 1; 
 }
