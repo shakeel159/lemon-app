@@ -32,3 +32,22 @@
     background-color:rgba(255, 217, 0, 0.637);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
+/* Mobile View */
+@media screen and (max-width: 768px) {
+/* Stack the cards vertically and adjust spacing */
+    .Specials-Body {
+        flex-direction: column;
+        align-items: center; /* Center the cards on smaller screens */
+    }
+     /* Make the button larger and more touch-friendly */
+     .Specials-Button {
+        width: 200px; /* Increase width on mobile */
+        height: 60px; /* Increase height on mobile */
+    }
+
+    /* Ensure the title doesn't touch the edges */
+    .Specials-Title {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}

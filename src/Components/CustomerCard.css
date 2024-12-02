@@ -24,9 +24,18 @@
 .Name {
     font-size: 100%;
     padding-left: 6%;
+    margin-top: -.8rem;
 }
 
 .Customer-Cards P {
     font-size: 100%;
     margin-left: 9px;
+    width: 15rem;
+}
+
+@media screen and (max-width: 768px) {
+    .Customer-Component {
+        flex-direction: column;
+        gap: 2rem;
+    }
 }

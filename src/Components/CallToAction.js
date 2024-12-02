@@ -2,8 +2,10 @@ import React from 'react';
 import './CallToAction.css';
 import ReservationPage from "./Reservation.js";
 import ChicagoText from './Chicago.js';
+import ChicagoImg from '../img/ChicagoResturant.jpg';
 
 const CallToAction = () => {
+  const chicagoStore = {};
   return (
     <div className="CallToAction-Container">
       <div className='CallToAction-Body-container'>
@@ -13,7 +15,7 @@ const CallToAction = () => {
         <ReservationPage />
       </div>
       <div className='CallToAction-Img-Container'>
-        <img className='CallToAction-image' img src="https://via.placeholder.com/300x200" alt="Temporary placeholder"></img>
+        <img className='CallToAction-image' img src={ChicagoImg} alt="Temporary placeholder"></img>
       </div>
       </div>
   );
