@@ -1,5 +1,5 @@
 import React from 'react';
-import ReservationPage from "./Reservation.js";
+import ReservationPage from "./ReservationBtn.js";
 import './Chicago.css';
 
 const Chicago = () => {

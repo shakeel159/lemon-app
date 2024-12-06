@@ -1,0 +1,56 @@
+
+
+.Reservation_Menu {
+
+    background-color: darkolivegreen;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Page_Context {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Body {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    width: 100%;
+}
+
+.Form_Component {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+label {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    font-size: 1.2rem;
+    font-weight: 700; 
+    color:black;
+    margin-bottom: 0.5rem; 
+}
+
+input {
+    width: 50%;
+    border-radius: 10%;
+}
+
+
+.SubmitBtn {
+    height: 50px;
+    width: 150px;
+    border-radius: 50px; /* For elongated, pill-shaped buttons */
+    background-color:gold;
+    color: black;
+    cursor: pointer;
+}
+.SubmitBtn:hover {
+    background-color:rgba(255, 217, 0, 0.637);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}

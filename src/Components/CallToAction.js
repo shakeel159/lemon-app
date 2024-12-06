@@ -1,6 +1,6 @@
 import React from 'react';
 import './CallToAction.css';
-import ReservationPage from "./Reservation.js";
+import ReservationPage from "./ReservationBtn.js";
 import ChicagoText from './Chicago.js';
 import ChicagoImg from '../img/ChicagoResturant.jpg';
 

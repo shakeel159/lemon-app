@@ -4,7 +4,7 @@ import Nav from './Nav.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 import HomePage from "./Home.js";
-import ReservationPage from "./Components/Reservation.js";
+import ReservationPage from "./Reservation.js";
 import ContactPage from "./Contact.js";
 import AboutPage from "./About.js";
 import MenuPage from "./Menu.js";
