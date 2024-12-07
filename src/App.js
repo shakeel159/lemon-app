@@ -4,14 +4,36 @@ import Nav from './Nav.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 import HomePage from "./Home.js";
-import ReservationPage from "./Reservation.js";
 import ContactPage from "./Contact.js";
 import AboutPage from "./About.js";
 import MenuPage from "./Menu.js";
+import ReservationPage from "./Reservation.js";
+import React, { useState, useReducer, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import './App.css';
 
+// Define a reducer function
+const availableTimesReducer = (state, action) => {
+  switch (action.type) {
+    case 'SET_TIMES':
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
+const initializeTimes  = () => {
+  return ["10:00", "10:30", "11:00", "12:00", "12:30", "1:00", "1:30", "3:00", "3:30", "4:30"];
+};
 function App() {
+ // Initialize state with useReducer
+ const [availableTimes, dispatch] = useReducer(availableTimesReducer, [], initializeTimes);
+
+ // Function to update available times based on selected date (for now, returns the same times)
+ const updateTimes = (selectedDate) => {
+  // For now, return the same available times regardless of selected date
+  dispatch({ type: 'SET_TIMES', payload: availableTimes });
+};
   return (
     <div className="app-container">
       <Header />
@@ -19,16 +41,16 @@ function App() {
         <Nav />
       </div>
       <div className="main-container">
-        <div className='main'>
-        <Main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/menu" element={<MenuPage />} />
-            <Route path="/reservation" element={<ReservationPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </Main>
+        <div className="main">
+          <Main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/menu" element={<MenuPage />} />
+              <Route path="/reservation" element={<ReservationPage availableTimes={availableTimes} dispatch={dispatch}/>} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </Main>
         </div>
       </div>
       <Footer />

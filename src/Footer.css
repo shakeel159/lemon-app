@@ -1,0 +1,15 @@
+
+.Footer_Body {
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.Invisiable_head {
+    color: white;
+}
+p{
+    cursor: pointer;
+    
+}
