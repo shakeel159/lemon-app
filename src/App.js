@@ -12,6 +12,7 @@ import React, { useState, useReducer, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import './App.css';
 
+const API = `https://raw.githubusercontent.com/courseraap/capstone/main/api.js`;
 // Define a reducer function
 const availableTimesReducer = (state, action) => {
   switch (action.type) {
@@ -22,19 +23,25 @@ const availableTimesReducer = (state, action) => {
   }
 };
 
-const initializeTimes  = () => {
-  return ["10:00", "10:30", "11:00", "12:00", "12:30", "1:00", "1:30", "3:00", "3:30", "4:30"];
-};
 function App() {
- // Initialize state with useReducer
- const [availableTimes, dispatch] = useReducer(availableTimesReducer, [], initializeTimes);
+  const [date, setDate] = useState(null);
 
- // Function to update available times based on selected date (for now, returns the same times)
- const updateTimes = (selectedDate) => {
-  // For now, return the same available times regardless of selected date
-  dispatch({ type: 'SET_TIMES', payload: availableTimes });
-};
-  return (
+  const initializeTimes  = () => {
+    return ["10:00", "10:30", "11:00", "12:00", "12:30", "1:00", "1:30", "3:00", "3:30", "4:30"];
+  };
+
+  //const initializeTimes = () => {
+  //  fetch(API)
+  //    .then((response) => response.json())
+  //    .then((data) => {
+  //      setDate(data); // Make sure to set the data properly
+  //    });
+  //};
+  //useEffect(() => {
+  //  initializeTimes();
+  //}, []);
+  const [availableTimes, dispatch] = useReducer(availableTimesReducer, [], initializeTimes); //MAYBE PASS IN AS PEREMETER
+  return(
     <div className="app-container">
       <Header />
       <div className="nav">
