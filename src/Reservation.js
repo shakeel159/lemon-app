@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 import './Reservation.css';
 
 const Reservation = ({ availableTimes, updateTimes }) => {
@@ -12,9 +12,27 @@ const Reservation = ({ availableTimes, updateTimes }) => {
     const [guests, setGuests] = useState("");
     const [comments, setComments] = useState("");
 
+    const navigate = useNavigate(); // For programmatic navigation
+
     const handleSubmit = (e) => {
+        e.preventDefault(); // Prevent default form submission
+        // Validate required fields
         if (name && lName && tel && date && time && guests) {
             alert("Reservation successfully submitted!");
+            navigate("/reservation/confirmation", {
+                state: {
+                    name,
+                    lName,
+                    email,
+                    tel,
+                    date,
+                    time,
+                    guests,
+                    comments
+                }
+            });
+        } else {
+            alert("Please fill out all required fields.");
         }
     };
 
@@ -22,7 +40,7 @@ const Reservation = ({ availableTimes, updateTimes }) => {
         <div className="Reservation_Menu">
             <h1 className="Page_Context">Reserve A Table</h1>
             <div className="Body">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <fieldset>
                         <div className="Form_Component">
                             <label htmlFor="name_for_reservation">Name for reservation</label><br />
@@ -43,6 +61,7 @@ const Reservation = ({ availableTimes, updateTimes }) => {
                             <input
                                 type="text"
                                 id="lName"
+                                 aria-label="Last Name for reservation"
                                 placeholder="Last Name"
                                 minLength={2}
                                 maxLength={50}
@@ -56,6 +75,7 @@ const Reservation = ({ availableTimes, updateTimes }) => {
                             <input
                                 type="email"
                                 id="email"
+                                 aria-label="Email for reservation"
                                 placeholder="Email"
                                 value={email}
                                 required
@@ -80,6 +100,7 @@ const Reservation = ({ availableTimes, updateTimes }) => {
                             <input
                                 type="tel"
                                 id="phonenum"
+                                 aria-label="Phone Number for reservation"
                                 placeholder="(xxx)-xxx-xxxx"
                                 value={tel}
                                 required
@@ -121,7 +142,7 @@ const Reservation = ({ availableTimes, updateTimes }) => {
                         </div>
                         <div className="Form_Component">
                             <label htmlFor="dropdown">Occasion</label><br />
-                            <select id="dropdown" aria-label="Select occasion">
+                            <select id="dropdown" aria-label="Select occasion from dropdown">
                                 <option value="none">None</option>
                                 <option value="Birthday">Birthday</option>
                                 <option value="Meeting">Meeting</option>
@@ -133,6 +154,7 @@ const Reservation = ({ availableTimes, updateTimes }) => {
                             <label htmlFor="comments">Additional Comments</label> <br></br>
                             <textarea
                                 id="comments"
+                                aria-label="comments for use here"
                                 rows={8}
                                 cols={50}
                                 placeholder="Additional Comments"
@@ -141,21 +163,7 @@ const Reservation = ({ availableTimes, updateTimes }) => {
                             ></textarea>
                         </div>
                         <div className="Form_Component">
-                        <Link
-                            to="/reservation/confirmation"
-                            state={{
-                                name,
-                                lName,
-                                email,
-                                tel,
-                                date,
-                                time,
-                                guests,
-                                comments
-                            }}
-                        >
-                            <button className="SubmitBtn">Submit</button>
-                        </Link>
+                            <button type="submit" className="SubmitBtn">Submit</button>
                         </div>
                     </fieldset>
                 </form>
