@@ -8,8 +8,9 @@ import ContactPage from "./Contact.js";
 import AboutPage from "./About.js";
 import MenuPage from "./Menu.js";
 import ReservationPage from "./Reservation.js";
+import Confirmation from './Components/confirmedBooking.js';
 import React, { useState, useReducer, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import {  BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 
 const API = `https://raw.githubusercontent.com/courseraap/capstone/main/api.js`;
@@ -24,23 +25,26 @@ const availableTimesReducer = (state, action) => {
 };
 
 function App() {
-  const [date, setDate] = useState(null);
 
   const initializeTimes  = () => {
     return ["10:00", "10:30", "11:00", "12:00", "12:30", "1:00", "1:30", "3:00", "3:30", "4:30"];
   };
 
-  //const initializeTimes = () => {
-  //  fetch(API)
-  //    .then((response) => response.json())
-  //    .then((data) => {
-  //      setDate(data); // Make sure to set the data properly
-  //    });
-  //};
-  //useEffect(() => {
-  //  initializeTimes();
-  //}, []);
-  const [availableTimes, dispatch] = useReducer(availableTimesReducer, [], initializeTimes); //MAYBE PASS IN AS PEREMETER
+  useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await fetch(API);
+            const data = await response.json();
+            // Assuming the API returns times
+            dispatch({ type: 'SET_TIMES', payload: data.times });
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+    fetchData();
+}, []);
+
+  const [availableTimes, dispatch] = useReducer(availableTimesReducer, [], initializeTimes);
   return(
     <div className="app-container">
       <Header />
@@ -50,12 +54,13 @@ function App() {
       <div className="main-container">
         <div className="main">
           <Main>
-            <Routes>
+          <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/menu" element={<MenuPage />} />
               <Route path="/reservation" element={<ReservationPage availableTimes={availableTimes} dispatch={dispatch}/>} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/reservation/confirmation" element={<Confirmation />} />
             </Routes>
           </Main>
         </div>

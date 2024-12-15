@@ -11,17 +11,18 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color:gold;
+    background-color:antiquewhite;
 }
 
 .Body {
     margin: 6rem;
-    background-color:darkgrey;
     display: flex;
     justify-content: center; /* Centers horizontally */
     width: 100%;
 }
-
+fieldset {
+    background-color: antiquewhite;
+}
 .Form_Component {
     display: flex;
     justify-content: center;
