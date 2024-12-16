@@ -9,7 +9,7 @@ import AboutPage from "./About.js";
 import MenuPage from "./Menu.js";
 import ReservationPage from "./Reservation.js";
 import Confirmation from './Components/confirmedBooking.js';
-import React, { useState, useReducer, useEffect } from "react";
+import React, { useState, useRef, useReducer, useEffect } from "react";
 import {  BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 
@@ -25,7 +25,6 @@ const availableTimesReducer = (state, action) => {
 };
 
 function App() {
-
   const initializeTimes  = () => {
     return ["10:00", "10:30", "11:00", "12:00", "12:30", "1:00", "1:30", "3:00", "3:30", "4:30"];
   };
@@ -49,13 +48,13 @@ function App() {
     <div className="app-container">
       <Header />
       <div className="nav">
-        <Nav />
+        <Nav/>
       </div>
       <div className="main-container">
         <div className="main">
           <Main>
           <Routes>
-              <Route path="/" element={<HomePage />} />
+              <Route path="/" element={<HomePage/>} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/menu" element={<MenuPage />} />
               <Route path="/reservation" element={<ReservationPage availableTimes={availableTimes} dispatch={dispatch}/>} />

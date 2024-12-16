@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState,useRef, useEffect } from "react";
 import logo from './img/logo.png';
 import './Nav.css';
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);  
   };
@@ -34,10 +33,9 @@ const Nav = () => {
             <Link className="links" to="/reservation">Reservation</Link>
           </li>
           <li className="nav-item">
-            <Link className="links" to="/about">About</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="links" to="/contact">Contact Us</Link>
+            <Link
+            className="links"
+            to="/about" >About</Link>
           </li>
         </ul>
       </nav>

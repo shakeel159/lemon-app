@@ -1,41 +1,48 @@
 
 .Customer-Component {
+
     display: flex;
-    justify-content: center;
-    gap: 3%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 2%;
-    padding-right: 2%;
-    background-color:darkolivegreen;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color:beige;
+    padding: 1rem;
+    box-shadow: 40%;
 }
 .Customer-Cards {
+    padding: .5rem;
+    width: 30%; /* Adjust based on the number of cards */
+    min-width: 300px; /* Prevent cards from shrinking too much on small screens */
+    max-width: 600px;
     display: flex;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.301);  
-    background-color:chocolate;
-    border-radius: 8px;
-    height: 150px;
+    border-radius: 10%;
+    background-color:burlywood;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.219);
 }
 
-.Customer-Cards .Card-Img {
-    width: 90%;
+.Card-Img-profile {
+    border-radius: 10%;
+    height: 10rem;
 }
 
 .Name {
-    font-size: 100%;
-    padding-left: 6%;
-    margin-top: -.8rem;
+    margin-left: 1rem;
+
 }
 
-.Customer-Cards P {
-    font-size: 100%;
-    margin-left: 9px;
-    width: 15rem;
+.rate {
+    text-align: start;
+    margin-top: -1rem;
+    margin-left: 1rem;
 }
 
 @media screen and (max-width: 768px) {
-    .Customer-Component {
-        flex-direction: column;
-        gap: 2rem;
+    .Customer-Cards {
+        width: 45%; /* Allows two cards per row on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Customer-Cards {
+        width: 90%; /* Single card per row on very small screens */
     }
 }

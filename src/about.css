@@ -1,0 +1,28 @@
+
+
+.About-resturant {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem;
+    margin-top: 1rem;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.219);
+}
+.About-resturant-name {
+    width: 100%;
+    padding-left: 1rem;
+    font-weight: 900;
+    font-size: 500%;
+}
+.About-Location {
+    width: 100%;
+    padding-left: 1rem;
+    margin-top: -2rem;
+    font-weight: 400;
+    font-size: 400%;
+}
+.About-describtion {
+    width: 100%;
+    padding-left: 1rem;
+    font-weight: 200;
+    font-size: 200%;
+}

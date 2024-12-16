@@ -5,12 +5,12 @@ const Card = ({ Name, Rating, Review, imageUrl }) => {
   return (
     <div className="Customer-Cards">
       <div>
-        <img className='Card-Img' src={imageUrl || "https://via.placeholder.com/300x200"} alt="Temporary placeholder"></img>
-        <h1 className='Name'>{Name}</h1>
+        <img className='Card-Img-profile' src={imageUrl || "https://via.placeholder.com/300x200"} alt="Temporary placeholder"></img>
       </div>
       <div>
-        <p>{Rating}</p>
-        <p>{Review}</p>
+        <h1 className='Name'>{Name}</h1>
+        <p  className='rate'>{Rating + "⭐"}</p>
+        <p  className='pi'>{Review}</p>
       </div>
     </div>
   );

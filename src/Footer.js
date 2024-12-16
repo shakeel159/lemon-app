@@ -9,7 +9,7 @@ const footer = () =>{
     };
 
     return(
-        <div>
+        <div className='FooterHead'>
             <p>© 2024 LittleLemon Inc. All rights reserved.</p>
             <div className="Footer_Body">
                 <div className="Pages">

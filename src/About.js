@@ -1,12 +1,13 @@
 
-
+import './about.css';
 import React from 'react';
 
 const Book = () => {
   return (
-    <div className="book-page">
-      <h1>About Us</h1>
-      <p>Learn more about our story and services.</p>
+    <div className="About-resturant">
+      <h1 className="About-resturant-name">Little Lemon</h1>
+      <h2 className="About-Location">Chicago</h2>
+      <p className="About-describtion">Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. The restaurant features a locally-sourced menu with daily specials.</p>
     </div>
   );
 };
