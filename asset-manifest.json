@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Shaqs-Little-Lemon-Resturant/static/css/main.d91028b7.css",
-    "main.js": "/Shaqs-Little-Lemon-Resturant/static/js/main.4e460f70.js",
-    "static/js/453.972856e4.chunk.js": "/Shaqs-Little-Lemon-Resturant/static/js/453.972856e4.chunk.js",
-    "static/media/Menu.pdf": "/Shaqs-Little-Lemon-Resturant/static/media/Menu.ef3642c1d5738510343e.pdf",
-    "static/media/DrinksMenuFour.pdf": "/Shaqs-Little-Lemon-Resturant/static/media/DrinksMenuFour.e064223a2ae5d88b1d88.pdf",
-    "static/media/DrinksMenuOne.pdf": "/Shaqs-Little-Lemon-Resturant/static/media/DrinksMenuOne.e064223a2ae5d88b1d88.pdf",
-    "static/media/DrinksMenuTwo.pdf": "/Shaqs-Little-Lemon-Resturant/static/media/DrinksMenuTwo.e064223a2ae5d88b1d88.pdf",
-    "static/media/ChicagoResturant.jpg": "/Shaqs-Little-Lemon-Resturant/static/media/ChicagoResturant.d5045f4c1564694befe4.jpg",
-    "static/media/ShrimpPasta.jpg": "/Shaqs-Little-Lemon-Resturant/static/media/ShrimpPasta.dadbc48cc3b754dffe6f.jpg",
-    "static/media/CalemariDish.jpg": "/Shaqs-Little-Lemon-Resturant/static/media/CalemariDish.27d716423d683aac8fc5.jpg",
-    "static/media/PizzaMag.jpg": "/Shaqs-Little-Lemon-Resturant/static/media/PizzaMag.441ca2f0b2ae0e541e5a.jpg",
-    "static/media/logo.png": "/Shaqs-Little-Lemon-Resturant/static/media/logo.170c87dfa63f93debff7.png",
-    "index.html": "/Shaqs-Little-Lemon-Resturant/index.html",
-    "main.d91028b7.css.map": "/Shaqs-Little-Lemon-Resturant/static/css/main.d91028b7.css.map",
-    "main.4e460f70.js.map": "/Shaqs-Little-Lemon-Resturant/static/js/main.4e460f70.js.map",
-    "453.972856e4.chunk.js.map": "/Shaqs-Little-Lemon-Resturant/static/js/453.972856e4.chunk.js.map"
+    "main.css": "/lemon-app/static/css/main.d91028b7.css",
+    "main.js": "/lemon-app/static/js/main.91368f49.js",
+    "static/js/453.972856e4.chunk.js": "/lemon-app/static/js/453.972856e4.chunk.js",
+    "static/media/Menu.pdf": "/lemon-app/static/media/Menu.ef3642c1d5738510343e.pdf",
+    "static/media/DrinksMenuFour.pdf": "/lemon-app/static/media/DrinksMenuFour.e064223a2ae5d88b1d88.pdf",
+    "static/media/DrinksMenuOne.pdf": "/lemon-app/static/media/DrinksMenuOne.e064223a2ae5d88b1d88.pdf",
+    "static/media/DrinksMenuTwo.pdf": "/lemon-app/static/media/DrinksMenuTwo.e064223a2ae5d88b1d88.pdf",
+    "static/media/ChicagoResturant.jpg": "/lemon-app/static/media/ChicagoResturant.d5045f4c1564694befe4.jpg",
+    "static/media/ShrimpPasta.jpg": "/lemon-app/static/media/ShrimpPasta.dadbc48cc3b754dffe6f.jpg",
+    "static/media/CalemariDish.jpg": "/lemon-app/static/media/CalemariDish.27d716423d683aac8fc5.jpg",
+    "static/media/PizzaMag.jpg": "/lemon-app/static/media/PizzaMag.441ca2f0b2ae0e541e5a.jpg",
+    "static/media/logo.png": "/lemon-app/static/media/logo.170c87dfa63f93debff7.png",
+    "index.html": "/lemon-app/index.html",
+    "main.d91028b7.css.map": "/lemon-app/static/css/main.d91028b7.css.map",
+    "main.91368f49.js.map": "/lemon-app/static/js/main.91368f49.js.map",
+    "453.972856e4.chunk.js.map": "/lemon-app/static/js/453.972856e4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d91028b7.css",
-    "static/js/main.4e460f70.js"
+    "static/js/main.91368f49.js"
   ]
 }
