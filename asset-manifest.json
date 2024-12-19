@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lemon-app/static/css/main.d91028b7.css",
-    "main.js": "/lemon-app/static/js/main.5103e9f1.js",
+    "main.js": "/lemon-app/static/js/main.595b183c.js",
     "static/js/453.972856e4.chunk.js": "/lemon-app/static/js/453.972856e4.chunk.js",
     "static/media/Menu.pdf": "/lemon-app/static/media/Menu.ef3642c1d5738510343e.pdf",
     "static/media/DrinksMenuFour.pdf": "/lemon-app/static/media/DrinksMenuFour.e064223a2ae5d88b1d88.pdf",
@@ -14,11 +14,11 @@
     "static/media/logo.png": "/lemon-app/static/media/logo.170c87dfa63f93debff7.png",
     "index.html": "/lemon-app/index.html",
     "main.d91028b7.css.map": "/lemon-app/static/css/main.d91028b7.css.map",
-    "main.5103e9f1.js.map": "/lemon-app/static/js/main.5103e9f1.js.map",
+    "main.595b183c.js.map": "/lemon-app/static/js/main.595b183c.js.map",
     "453.972856e4.chunk.js.map": "/lemon-app/static/js/453.972856e4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d91028b7.css",
-    "static/js/main.5103e9f1.js"
+    "static/js/main.595b183c.js"
   ]
 }
