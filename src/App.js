@@ -9,12 +9,11 @@ import MenuPage from "./Menu.js";
 import ReservationPage from "./Reservation.js";
 import Confirmation from './Components/confirmedBooking.js';
 import React, { useReducer, useEffect } from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import './App.css';
 
 const API = `https://raw.githubusercontent.com/courseraap/capstone/main/api.js`;
 
-// Define a reducer function
 const availableTimesReducer = (state, action) => {
   switch (action.type) {
     case 'SET_TIMES':
@@ -45,32 +44,30 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="app-container">
-        <Header />
-        <div className="nav">
-          <Nav />
-        </div>
-        <div className="main-container">
-          <div className="main">
-            <Main>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/menu" element={<MenuPage />} />
-                <Route
-                  path="/reservation"
-                  element={<ReservationPage availableTimes={availableTimes} dispatch={dispatch} />}
-                />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/reservation/confirmation" element={<Confirmation />} />
-              </Routes>
-            </Main>
-          </div>
-        </div>
-        <Footer />
+    <div className="app-container">
+      <Header />
+      <div className="nav">
+        <Nav />
       </div>
-    </Router>
+      <div className="main-container">
+        <div className="main">
+          <Main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/menu" element={<MenuPage />} />
+              <Route
+                path="/reservation"
+                element={<ReservationPage availableTimes={availableTimes} dispatch={dispatch} />}
+              />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/reservation/confirmation" element={<Confirmation />} />
+            </Routes>
+          </Main>
+        </div>
+      </div>
+      <Footer />
+    </div>
   );
 }
 
