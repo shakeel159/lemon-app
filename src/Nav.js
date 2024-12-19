@@ -1,19 +1,21 @@
 import { Link } from "react-router-dom";
-import { useState,useRef, useEffect } from "react";
-import logo from './img/logo.png';
+import { useState } from "react";
+import logo from './img/logo.png'; // Ensure this path is correct
 import './Nav.css';
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);  
   };
 
   return (
     <div className="NavBar">
-         <div className='img-container'> 
-            <img className={logo} src={logo}/>
-        </div>
+      {/* Logo */}
+      <div className='img-container'> 
+        <img className="logo" src={logo} alt="Logo" />
+      </div>
 
       {/* Hamburger menu for small screens */}
       <div className="hamburger" onClick={toggleMenu}>
@@ -33,9 +35,7 @@ const Nav = () => {
             <Link className="links" to="/reservation">Reservation</Link>
           </li>
           <li className="nav-item">
-            <Link
-            className="links"
-            to="/about" >About</Link>
+            <Link className="links" to="/about">About</Link>
           </li>
         </ul>
       </nav>
